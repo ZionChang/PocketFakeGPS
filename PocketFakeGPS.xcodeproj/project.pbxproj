@@ -618,7 +618,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2KT364D29M;
+				DEVELOPMENT_TEAM = WUQ7396F55;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PocketFakeGPS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -636,7 +636,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2KT364D29M;
+				DEVELOPMENT_TEAM = WUQ7396F55;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PocketFakeGPS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
