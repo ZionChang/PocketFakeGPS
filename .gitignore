@@ -64,4 +64,7 @@ iOSInjectionProject/
 
 LatestBuild/
 Pocket_Headers/
+PocketFakeGPS/tmp
+PocketFakeGPS/TargetApp/pocket.app
+
 
