@@ -1,0 +1,686 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A4CC1D41FBD689D00B9FCF3 /* MethodTraceConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A4CC1D31FBD689D00B9FCF3 /* MethodTraceConfig.plist */; };
+		3A4CC1D71FBD689D00B9FCF3 /* put ipa or app here in Resources */ = {isa = PBXBuildFile; fileRef = 3A4CC1D61FBD689D00B9FCF3 /* put ipa or app here */; };
+		3A4CC1DF1FBD689D00B9FCF3 /* libPocketFakeGPSDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A4CC1DE1FBD689D00B9FCF3 /* libPocketFakeGPSDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3A4CC1E41FBD689D00B9FCF3 /* Cycript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4CC1E31FBD689D00B9FCF3 /* Cycript.framework */; };
+		3A4CC1E61FBD689D00B9FCF3 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4CC1E51FBD689D00B9FCF3 /* JavaScriptCore.framework */; };
+		3A4CC1E81FBD689D00B9FCF3 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4CC1E71FBD689D00B9FCF3 /* RevealServer.framework */; };
+		3A4CC1EA1FBD689D00B9FCF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4CC1E91FBD689D00B9FCF3 /* Foundation.framework */; };
+		3A4CC1EC1FBD689D00B9FCF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4CC1EB1FBD689D00B9FCF3 /* UIKit.framework */; };
+		3A4CC1F01FBD689D00B9FCF3 /* ANYMethodLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4CC1EF1FBD689D00B9FCF3 /* ANYMethodLog.h */; };
+		3A4CC1F21FBD689D00B9FCF3 /* ANYMethodLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CC1F11FBD689D00B9FCF3 /* ANYMethodLog.m */; };
+		3A4CC1F41FBD689D00B9FCF3 /* MethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4CC1F31FBD689D00B9FCF3 /* MethodTrace.h */; };
+		3A4CC1F61FBD689D00B9FCF3 /* MethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CC1F51FBD689D00B9FCF3 /* MethodTrace.m */; };
+		3A4CC1FB1FBD689D00B9FCF3 /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CC1FA1FBD689D00B9FCF3 /* AntiAntiDebug.m */; };
+		3A4CC1FE1FBD689D00B9FCF3 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CC1FD1FBD689D00B9FCF3 /* fishhook.c */; };
+		3A4CC2001FBD689D00B9FCF3 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4CC1FF1FBD689D00B9FCF3 /* fishhook.h */; };
+		3A4CC2031FBD689D00B9FCF3 /* PocketFakeGPSDylib.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CC2021FBD689D00B9FCF3 /* PocketFakeGPSDylib.mm */; };
+		3A4CC2051FBD689D00B9FCF3 /* PocketFakeGPSDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4CC2041FBD689D00B9FCF3 /* PocketFakeGPSDylib.h */; };
+		3A4CC2071FBD689D00B9FCF3 /* PocketFakeGPSDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CC2061FBD689D00B9FCF3 /* PocketFakeGPSDylib.m */; };
+		3A4CC2141FBD68AD00B9FCF3 /* LocationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4CC2101FBD68AC00B9FCF3 /* LocationViewController.h */; };
+		3A4CC2151FBD68AD00B9FCF3 /* LocationResultViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4CC2111FBD68AC00B9FCF3 /* LocationResultViewController.h */; };
+		3A4CC2161FBD68AD00B9FCF3 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CC2121FBD68AC00B9FCF3 /* LocationViewController.m */; };
+		3A4CC2171FBD68AD00B9FCF3 /* LocationResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CC2131FBD68AD00B9FCF3 /* LocationResultViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A4CC1E01FBD689D00B9FCF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A4CC1C51FBD689D00B9FCF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A4CC1DD1FBD689D00B9FCF3;
+			remoteInfo = PocketFakeGPSDylib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A4CC1CD1FBD689D00B9FCF3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3A4CC1DF1FBD689D00B9FCF3 /* libPocketFakeGPSDylib.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3A4CC1D01FBD689D00B9FCF3 /* PocketFakeGPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketFakeGPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A4CC1D31FBD689D00B9FCF3 /* MethodTraceConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MethodTraceConfig.plist; sourceTree = "<group>"; };
+		3A4CC1D61FBD689D00B9FCF3 /* put ipa or app here */ = {isa = PBXFileReference; lastKnownFileType = text; name = "put ipa or app here"; path = "TargetApp/put ipa or app here"; sourceTree = "<group>"; };
+		3A4CC1D81FBD689D00B9FCF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A4CC1DE1FBD689D00B9FCF3 /* libPocketFakeGPSDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libPocketFakeGPSDylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A4CC1E31FBD689D00B9FCF3 /* Cycript.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cycript.framework; path = Library/Frameworks/Cycript.framework; sourceTree = DEVELOPER_DIR; };
+		3A4CC1E51FBD689D00B9FCF3 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		3A4CC1E71FBD689D00B9FCF3 /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RevealServer.framework; path = Library/Frameworks/RevealServer.framework; sourceTree = DEVELOPER_DIR; };
+		3A4CC1E91FBD689D00B9FCF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3A4CC1EB1FBD689D00B9FCF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3A4CC1EF1FBD689D00B9FCF3 /* ANYMethodLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ANYMethodLog.h; path = MethodTrace/ANYMethodLog.h; sourceTree = "<group>"; };
+		3A4CC1F11FBD689D00B9FCF3 /* ANYMethodLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ANYMethodLog.m; path = MethodTrace/ANYMethodLog.m; sourceTree = "<group>"; };
+		3A4CC1F31FBD689D00B9FCF3 /* MethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MethodTrace.h; path = MethodTrace/MethodTrace.h; sourceTree = "<group>"; };
+		3A4CC1F51FBD689D00B9FCF3 /* MethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MethodTrace.m; path = MethodTrace/MethodTrace.m; sourceTree = "<group>"; };
+		3A4CC1F81FBD689D00B9FCF3 /* PocketFakeGPSDylib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PocketFakeGPSDylib-Prefix.pch"; sourceTree = "<group>"; };
+		3A4CC1FA1FBD689D00B9FCF3 /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AntiAntiDebug.m; path = AntiAntiDebug/AntiAntiDebug.m; sourceTree = "<group>"; };
+		3A4CC1FD1FBD689D00B9FCF3 /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fishhook.c; path = fishhook/fishhook.c; sourceTree = "<group>"; };
+		3A4CC1FF1FBD689D00B9FCF3 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fishhook.h; path = fishhook/fishhook.h; sourceTree = "<group>"; };
+		3A4CC2011FBD689D00B9FCF3 /* PocketFakeGPSDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PocketFakeGPSDylib.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3A4CC2021FBD689D00B9FCF3 /* PocketFakeGPSDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PocketFakeGPSDylib.mm; sourceTree = "<group>"; };
+		3A4CC2041FBD689D00B9FCF3 /* PocketFakeGPSDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocketFakeGPSDylib.h; sourceTree = "<group>"; };
+		3A4CC2061FBD689D00B9FCF3 /* PocketFakeGPSDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketFakeGPSDylib.m; sourceTree = "<group>"; };
+		3A4CC2101FBD68AC00B9FCF3 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		3A4CC2111FBD68AC00B9FCF3 /* LocationResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationResultViewController.h; sourceTree = "<group>"; };
+		3A4CC2121FBD68AC00B9FCF3 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		3A4CC2131FBD68AD00B9FCF3 /* LocationResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationResultViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A4CC1CA1FBD689D00B9FCF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A4CC1DB1FBD689D00B9FCF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4CC1E61FBD689D00B9FCF3 /* JavaScriptCore.framework in Frameworks */,
+				3A4CC1E81FBD689D00B9FCF3 /* RevealServer.framework in Frameworks */,
+				3A4CC1E41FBD689D00B9FCF3 /* Cycript.framework in Frameworks */,
+				3A4CC1EA1FBD689D00B9FCF3 /* Foundation.framework in Frameworks */,
+				3A4CC1EC1FBD689D00B9FCF3 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A4CC1C41FBD689D00B9FCF3 = {
+			isa = PBXGroup;
+			children = (
+				3A4CC1D21FBD689D00B9FCF3 /* PocketFakeGPS */,
+				3A4CC1ED1FBD689D00B9FCF3 /* PocketFakeGPSDylib */,
+				3A4CC1E21FBD689D00B9FCF3 /* Frameworks */,
+				3A4CC1D11FBD689D00B9FCF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A4CC1D11FBD689D00B9FCF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A4CC1D01FBD689D00B9FCF3 /* PocketFakeGPS.app */,
+				3A4CC1DE1FBD689D00B9FCF3 /* libPocketFakeGPSDylib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A4CC1D21FBD689D00B9FCF3 /* PocketFakeGPS */ = {
+			isa = PBXGroup;
+			children = (
+				3A4CC1D31FBD689D00B9FCF3 /* MethodTraceConfig.plist */,
+				3A4CC1D81FBD689D00B9FCF3 /* Info.plist */,
+				3A4CC1D51FBD689D00B9FCF3 /* TargetApp */,
+			);
+			path = PocketFakeGPS;
+			sourceTree = "<group>";
+		};
+		3A4CC1D51FBD689D00B9FCF3 /* TargetApp */ = {
+			isa = PBXGroup;
+			children = (
+				3A4CC1D61FBD689D00B9FCF3 /* put ipa or app here */,
+			);
+			name = TargetApp;
+			sourceTree = "<group>";
+		};
+		3A4CC1E21FBD689D00B9FCF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A4CC1E31FBD689D00B9FCF3 /* Cycript.framework */,
+				3A4CC1E51FBD689D00B9FCF3 /* JavaScriptCore.framework */,
+				3A4CC1E71FBD689D00B9FCF3 /* RevealServer.framework */,
+				3A4CC1E91FBD689D00B9FCF3 /* Foundation.framework */,
+				3A4CC1EB1FBD689D00B9FCF3 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A4CC1ED1FBD689D00B9FCF3 /* PocketFakeGPSDylib */ = {
+			isa = PBXGroup;
+			children = (
+				3A4CC2011FBD689D00B9FCF3 /* PocketFakeGPSDylib.xm */,
+				3A4CC2021FBD689D00B9FCF3 /* PocketFakeGPSDylib.mm */,
+				3A4CC2041FBD689D00B9FCF3 /* PocketFakeGPSDylib.h */,
+				3A4CC2061FBD689D00B9FCF3 /* PocketFakeGPSDylib.m */,
+				3A4CC2181FBD693B00B9FCF3 /* Location */,
+				3A4CC1EE1FBD689D00B9FCF3 /* MethodTrace */,
+				3A4CC1F91FBD689D00B9FCF3 /* AntiAntiDebug */,
+				3A4CC1FC1FBD689D00B9FCF3 /* fishhook */,
+				3A4CC1F71FBD689D00B9FCF3 /* Supporting Files */,
+			);
+			path = PocketFakeGPSDylib;
+			sourceTree = "<group>";
+		};
+		3A4CC1EE1FBD689D00B9FCF3 /* MethodTrace */ = {
+			isa = PBXGroup;
+			children = (
+				3A4CC1EF1FBD689D00B9FCF3 /* ANYMethodLog.h */,
+				3A4CC1F11FBD689D00B9FCF3 /* ANYMethodLog.m */,
+				3A4CC1F31FBD689D00B9FCF3 /* MethodTrace.h */,
+				3A4CC1F51FBD689D00B9FCF3 /* MethodTrace.m */,
+			);
+			name = MethodTrace;
+			sourceTree = "<group>";
+		};
+		3A4CC1F71FBD689D00B9FCF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A4CC1F81FBD689D00B9FCF3 /* PocketFakeGPSDylib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A4CC1F91FBD689D00B9FCF3 /* AntiAntiDebug */ = {
+			isa = PBXGroup;
+			children = (
+				3A4CC1FA1FBD689D00B9FCF3 /* AntiAntiDebug.m */,
+			);
+			name = AntiAntiDebug;
+			sourceTree = "<group>";
+		};
+		3A4CC1FC1FBD689D00B9FCF3 /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				3A4CC1FD1FBD689D00B9FCF3 /* fishhook.c */,
+				3A4CC1FF1FBD689D00B9FCF3 /* fishhook.h */,
+			);
+			name = fishhook;
+			sourceTree = "<group>";
+		};
+		3A4CC2181FBD693B00B9FCF3 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3A4CC2101FBD68AC00B9FCF3 /* LocationViewController.h */,
+				3A4CC2121FBD68AC00B9FCF3 /* LocationViewController.m */,
+				3A4CC2111FBD68AC00B9FCF3 /* LocationResultViewController.h */,
+				3A4CC2131FBD68AD00B9FCF3 /* LocationResultViewController.m */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3A4CC1DC1FBD689D00B9FCF3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4CC1F01FBD689D00B9FCF3 /* ANYMethodLog.h in Headers */,
+				3A4CC2151FBD68AD00B9FCF3 /* LocationResultViewController.h in Headers */,
+				3A4CC2051FBD689D00B9FCF3 /* PocketFakeGPSDylib.h in Headers */,
+				3A4CC1F41FBD689D00B9FCF3 /* MethodTrace.h in Headers */,
+				3A4CC2001FBD689D00B9FCF3 /* fishhook.h in Headers */,
+				3A4CC2141FBD68AD00B9FCF3 /* LocationViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3A4CC1CF1FBD689D00B9FCF3 /* PocketFakeGPS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A4CC20D1FBD689D00B9FCF3 /* Build configuration list for PBXNativeTarget "PocketFakeGPS" */;
+			buildPhases = (
+				3A4CC1C91FBD689D00B9FCF3 /* Sources */,
+				3A4CC1CA1FBD689D00B9FCF3 /* Frameworks */,
+				3A4CC1CB1FBD689D00B9FCF3 /* ShellScript */,
+				3A4CC1CC1FBD689D00B9FCF3 /* Resources */,
+				3A4CC1CD1FBD689D00B9FCF3 /* CopyFiles */,
+				3A4CC1CE1FBD689D00B9FCF3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A4CC1E11FBD689D00B9FCF3 /* PBXTargetDependency */,
+			);
+			name = PocketFakeGPS;
+			productName = PocketFakeGPS;
+			productReference = 3A4CC1D01FBD689D00B9FCF3 /* PocketFakeGPS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A4CC1DD1FBD689D00B9FCF3 /* PocketFakeGPSDylib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A4CC20A1FBD689D00B9FCF3 /* Build configuration list for PBXNativeTarget "PocketFakeGPSDylib" */;
+			buildPhases = (
+				3A4CC1D91FBD689D00B9FCF3 /* ShellScript */,
+				3A4CC1DA1FBD689D00B9FCF3 /* Sources */,
+				3A4CC1DB1FBD689D00B9FCF3 /* Frameworks */,
+				3A4CC1DC1FBD689D00B9FCF3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PocketFakeGPSDylib;
+			productName = PocketFakeGPSDylib;
+			productReference = 3A4CC1DE1FBD689D00B9FCF3 /* libPocketFakeGPSDylib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A4CC1C51FBD689D00B9FCF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = zz;
+				TargetAttributes = {
+					3A4CC1CF1FBD689D00B9FCF3 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					3A4CC1DD1FBD689D00B9FCF3 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3A4CC1C81FBD689D00B9FCF3 /* Build configuration list for PBXProject "PocketFakeGPS" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3A4CC1C41FBD689D00B9FCF3;
+			productRefGroup = 3A4CC1D11FBD689D00B9FCF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A4CC1CF1FBD689D00B9FCF3 /* PocketFakeGPS */,
+				3A4CC1DD1FBD689D00B9FCF3 /* PocketFakeGPSDylib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A4CC1CC1FBD689D00B9FCF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4CC1D71FBD689D00B9FCF3 /* put ipa or app here in Resources */,
+				3A4CC1D41FBD689D00B9FCF3 /* MethodTraceConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A4CC1CB1FBD689D00B9FCF3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = /opt/MonkeyDev/Tools/pack.sh;
+		};
+		3A4CC1CE1FBD689D00B9FCF3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign";
+		};
+		3A4CC1D91FBD689D00B9FCF3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A4CC1C91FBD689D00B9FCF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A4CC1DA1FBD689D00B9FCF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4CC2171FBD68AD00B9FCF3 /* LocationResultViewController.m in Sources */,
+				3A4CC2071FBD689D00B9FCF3 /* PocketFakeGPSDylib.m in Sources */,
+				3A4CC1FB1FBD689D00B9FCF3 /* AntiAntiDebug.m in Sources */,
+				3A4CC2161FBD68AD00B9FCF3 /* LocationViewController.m in Sources */,
+				3A4CC1F61FBD689D00B9FCF3 /* MethodTrace.m in Sources */,
+				3A4CC1FE1FBD689D00B9FCF3 /* fishhook.c in Sources */,
+				3A4CC1F21FBD689D00B9FCF3 /* ANYMethodLog.m in Sources */,
+				3A4CC2031FBD689D00B9FCF3 /* PocketFakeGPSDylib.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A4CC1E11FBD689D00B9FCF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A4CC1DD1FBD689D00B9FCF3 /* PocketFakeGPSDylib */;
+			targetProxy = 3A4CC1E01FBD689D00B9FCF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3A4CC2081FBD689D00B9FCF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3A4CC2091FBD689D00B9FCF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A4CC20B1FBD689D00B9FCF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KT364D29M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PocketFakeGPSDylib/PocketFakeGPSDylib-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libPocketFakeGPSDylib.dylib";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"PocketFakeGPSDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-lsubstrate",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		3A4CC20C1FBD689D00B9FCF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 2KT364D29M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PocketFakeGPSDylib/PocketFakeGPSDylib-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libPocketFakeGPSDylib.dylib";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"PocketFakeGPSDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-lsubstrate",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3A4CC20E1FBD689D00B9FCF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KT364D29M;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PocketFakeGPS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MONKEYDEV_CLASS_DUMP = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = aaa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A4CC20F1FBD689D00B9FCF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KT364D29M;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PocketFakeGPS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MONKEYDEV_CLASS_DUMP = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = aaa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A4CC1C81FBD689D00B9FCF3 /* Build configuration list for PBXProject "PocketFakeGPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A4CC2081FBD689D00B9FCF3 /* Debug */,
+				3A4CC2091FBD689D00B9FCF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A4CC20A1FBD689D00B9FCF3 /* Build configuration list for PBXNativeTarget "PocketFakeGPSDylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A4CC20B1FBD689D00B9FCF3 /* Debug */,
+				3A4CC20C1FBD689D00B9FCF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A4CC20D1FBD689D00B9FCF3 /* Build configuration list for PBXNativeTarget "PocketFakeGPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A4CC20E1FBD689D00B9FCF3 /* Debug */,
+				3A4CC20F1FBD689D00B9FCF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A4CC1C51FBD689D00B9FCF3 /* Project object */;
+}
