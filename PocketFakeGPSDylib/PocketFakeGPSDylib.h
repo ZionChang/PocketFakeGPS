@@ -29,3 +29,8 @@
 - (void)didTapLocatedButton;
 
 @end
+
+@interface WADSelectSignOutSideTypeViewController: UIViewController
+
+@end
+

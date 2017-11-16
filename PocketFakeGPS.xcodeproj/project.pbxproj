@@ -73,7 +73,7 @@
 		3A4CC1FA1FBD689D00B9FCF3 /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AntiAntiDebug.m; path = AntiAntiDebug/AntiAntiDebug.m; sourceTree = "<group>"; };
 		3A4CC1FD1FBD689D00B9FCF3 /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fishhook.c; path = fishhook/fishhook.c; sourceTree = "<group>"; };
 		3A4CC1FF1FBD689D00B9FCF3 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fishhook.h; path = fishhook/fishhook.h; sourceTree = "<group>"; };
-		3A4CC2011FBD689D00B9FCF3 /* PocketFakeGPSDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PocketFakeGPSDylib.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3A4CC2011FBD689D00B9FCF3 /* PocketFakeGPSDylib.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = PocketFakeGPSDylib.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		3A4CC2021FBD689D00B9FCF3 /* PocketFakeGPSDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PocketFakeGPSDylib.mm; sourceTree = "<group>"; };
 		3A4CC2041FBD689D00B9FCF3 /* PocketFakeGPSDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocketFakeGPSDylib.h; sourceTree = "<group>"; };
 		3A4CC2061FBD689D00B9FCF3 /* PocketFakeGPSDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketFakeGPSDylib.m; sourceTree = "<group>"; };

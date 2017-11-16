@@ -13,6 +13,7 @@
 #import <UIKit/UIKit.h>
 #import <Cycript/Cycript.h>
 #import "LocationViewController.h"
+@import CoreLocation;
 
 static __attribute__((constructor)) void entry(){
     NSLog(@"\n               🎉!!！congratulations!!！🎉\n👍----------------insert dylib success----------------👍");
@@ -42,12 +43,40 @@ CHDeclareMethod(0, void, MOASettingViewController, didTapLocatedButton) {
     [self.navigationController pushViewController:vc animated:true];
 }
 
+#pragma mark - WADSelectSignOutSideTypeViewController
+
+CHDeclareClass(WADSelectSignOutSideTypeViewController)
+
+CHOptimizedMethod1(self, void, WADSelectSignOutSideTypeViewController, viewDidAppear, BOOL, animated) {
+    CHSuper1(WADSelectSignOutSideTypeViewController, viewDidAppear, animated);
+    const char *name = object_getClassName(self);
+    if (strcmp(name, "WADSelectSignOutSideTypeViewController") == 0) {
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        double latitude = [ud doubleForKey:@"zz_latitude"];
+        double longitude = [ud doubleForKey:@"zz_longitude"];
+        CLLocation *location = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+        [self setValue:location forKey:@"currentUserCLLocation"];
+    }
+    
+}
+
 
 #pragma mark - CHConstructor
 
 CHConstructor{
     CHLoadLateClass(MOASettingViewController);
     CHClassHook(1, MOASettingViewController, viewWillAppear);
+    
+    CHLoadLateClass(WADSelectSignOutSideTypeViewController);
+    CHClassHook(1, WADSelectSignOutSideTypeViewController, viewDidAppear);
 }
+
+
+
+
+
+
+
+
 
 
