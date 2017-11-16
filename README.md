@@ -4,11 +4,14 @@
 
 ## 简介
 
-使用方法比较简单，欢迎star
+开启方式：我->虚拟定位->搜索->选择即可
 
+欢迎star
 
-![](https://github.com/ZionChang/PocketFakeGPS/tree/master/imgs/1.JPG)
-![](https://github.com/ZionChang/PocketFakeGPS/tree/master/imgs/2.PNG)
-![](https://github.com/ZionChang/PocketFakeGPS/tree/master/imgs/3.PNG)
+## 图片
+
+![](./imgs/1.png)
+![](./imgs/2.png)
+![](./imgs/3.png)
 
 
