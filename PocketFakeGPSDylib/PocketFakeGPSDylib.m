@@ -31,17 +31,19 @@ CHDeclareClass(MOASettingViewController)
 
 CHOptimizedMethod1(self, void, MOASettingViewController, viewWillAppear, BOOL, animated) {
     CHSuper1(MOASettingViewController, viewWillAppear, animated);
-    UIButton *button = [objc_getClass("MOAHeadView") addRightButtonWithTitle:@"定位"];
+    UIButton *button = [objc_getClass("MOAHeadView") addRightButtonWithTitle:@"虚拟定位"];
     [button addTarget:self action:@selector(didTapLocatedButton) forControlEvents:UIControlEventTouchUpInside];
     MOAHeadView *headerView = [self valueForKey:@"headView"];
     [headerView addSubview: button];
 }
 
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-prototypes"
 CHDeclareMethod(0, void, MOASettingViewController, didTapLocatedButton) {
     LocationViewController *vc = [[LocationViewController alloc] init];
     [self.navigationController pushViewController:vc animated:true];
 }
+#pragma clang diagnostic pop
 
 #pragma mark - WADSelectSignOutSideTypeViewController
 

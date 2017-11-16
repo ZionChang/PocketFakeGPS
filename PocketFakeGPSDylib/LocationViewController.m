@@ -15,7 +15,7 @@
 @property (nonatomic, strong) LocationResultViewController *resultVC;
 @property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
-@property (nonatomic, strong) NSMutableArray *annotations;
+@property (nonatomic, strong) MKPointAnnotation *lastAnnotation;
 
 @end
 
@@ -35,30 +35,31 @@
         [weakSelf.mapView setRegion:region animated:YES];
         // 添加
         CLLocationCoordinate2D newCoordinate = mapItem.placemark.coordinate;
-        for (MKPointAnnotation *annotation in weakSelf.annotations) {
-            if (annotation.coordinate.latitude == newCoordinate.latitude && annotation.coordinate.longitude == newCoordinate.longitude) {
-                return;
-            }
+        // 判重
+        if (weakSelf.lastAnnotation.coordinate.latitude == newCoordinate.latitude && weakSelf.lastAnnotation.coordinate.longitude == newCoordinate.longitude) {
+            return;
         }
+        // 添加大头针
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
         annotation.coordinate = mapItem.placemark.coordinate;
         annotation.title = title;
+        [weakSelf.mapView removeAnnotation:weakSelf.lastAnnotation];
         [weakSelf.mapView addAnnotation:annotation];
-        [weakSelf.annotations addObject:annotation];
-        
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"你确定是不是这个位置" message:nil preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"不是" style:UIAlertActionStyleCancel handler:nil];
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"就是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-            [ud setDouble:newCoordinate.latitude forKey:@"zz_latitude"];
-            [ud setDouble:newCoordinate.longitude forKey:@"zz_longitude"];
-            [ud setObject:title forKey:@"zz_title"];
-        }];
-        [alertController addAction:cancelAction];
-        [alertController addAction:okAction];
+        weakSelf.lastAnnotation = annotation;
+        // 弹框
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"🎉定位成功啦" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        // 本地化
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        [ud setDouble:newCoordinate.latitude forKey:@"zz_latitude"];
+        [ud setDouble:newCoordinate.longitude forKey:@"zz_longitude"];
+        [ud setObject:title forKey:@"zz_title"];
+        // dismiss
         [weakSelf presentViewController:alertController animated:YES completion:nil];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf dismissViewControllerAnimated:YES completion:nil];
+        });
     };
-    UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithTitle:@"重新定位" style:UIBarButtonItemStylePlain target:self action:@selector(didTapRefreshItem)];
+    UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithTitle:@"回到过去" style:UIBarButtonItemStylePlain target:self action:@selector(didTapRefreshItem)];
     self.navigationItem.rightBarButtonItem = refreshItem;
 }
 
@@ -91,7 +92,8 @@
 - (void)didTapRefreshItem {
     MKCoordinateSpan span = MKCoordinateSpanMake(0.03, 0.03);
     [self.mapView setRegion:MKCoordinateRegionMake(_mapView.userLocation.coordinate, span) animated:YES];
-    [self.mapView removeAnnotations:self.annotations];
+    [self.mapView removeAnnotation:self.lastAnnotation];
+    self.lastAnnotation = nil;
 }
 
 
@@ -121,7 +123,7 @@
             annotation.coordinate = coordinate;
             annotation.title = title;
             [_mapView addAnnotation:annotation];
-            [self.annotations addObject:annotation];
+            self.lastAnnotation = annotation;
             [_mapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(latitude, longitude), span) animated:YES];
         }
         
@@ -137,13 +139,6 @@
         _locationManager.delegate = self;
     }
     return _locationManager;
-}
-
-- (NSMutableArray *)annotations {
-    if (!_annotations) {
-        _annotations = [NSMutableArray array];
-    }
-    return _annotations;
 }
 
 #pragma mark - CLLocationManagerDelegate
